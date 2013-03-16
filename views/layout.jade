@@ -1,0 +1,25 @@
+!!! 5
+html
+  head
+    title #{title} Bing
+    link(rel='stylesheet', href='/stylesheets/style.css', type='text/css')
+  body
+    #doc2.yui-t7
+      #hd(role='banner')
+        h1 Search
+      #bd(role='main')
+        .yui-g
+          div
+            form#googleform(method='post', action='/search')
+              label(for='q') Bing:
+              input#q.gsc-input(type='text', name='q', placeholder='', required='required', autocomplete='off', value='#{title}') 
+              input#send.gsc-search-button(type='submit', name='send', value='Go!') 
+
+      block content
+
+      #ft(role='contentinfo')
+        p
+          | &copy; 2013 Some Rights Reserved | created by  @
+          a(href='http://twitter.com/thinkphp') thinkphp 
+          | |  Download on 
+          a(href='http://github.com/thinkphp/express-bing') GitHub 

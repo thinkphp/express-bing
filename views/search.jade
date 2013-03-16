@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+   h1 Results...
+   items = search
+   ol#ul
+      each item, i in items
+           li
+             h3
+               a(href=item.Url) #{item.Title}
+             p #{item.Description}
